@@ -18,6 +18,13 @@
           </p>
         <% } %>
       <% } else { %>
+        <% if (post.toc === true){ %>
+          <br>
+          <hr>
+          <h2>Contents</h2>
+          <%- toc(page.content, { list_number: false }) %>
+          <hr>
+        <% } %>
         <%- post.content %>
       <% } %>
     </div>
